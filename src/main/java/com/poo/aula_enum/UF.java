@@ -1,7 +1,7 @@
 package com.poo.aula_enum;
 
 public enum UF {
-    
+
     AC("Acre"),
     AL("Alagoas"),
     AP("Amapá"),
@@ -38,5 +38,14 @@ public enum UF {
 
     public String getNomePorExtenso() {
         return nomePorExtenso;
+    }
+
+    public static boolean validarSigla(String sigla) {
+        for (UF uf : values()) {
+            if (uf.name().equals(sigla)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
