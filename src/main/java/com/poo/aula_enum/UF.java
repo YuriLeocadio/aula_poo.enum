@@ -54,4 +54,12 @@ public enum UF {
         }
         return false;
     }
+
+    public static void escreverEstadosPorRegiao(Regiao regiao) {
+        for (UF uf : values()) {
+            if (uf.getRegiao() == regiao) {
+                System.out.println(uf.name() + " - " + uf.getNomePorExtenso());
+            }
+        }
+    }
 }
